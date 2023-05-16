@@ -1,7 +1,7 @@
 package cts.template.clase;
 
 public abstract class IMasa {
-    private int numar;
+    private final int numar;
 
     public IMasa(int numar) {
         this.numar = numar;
