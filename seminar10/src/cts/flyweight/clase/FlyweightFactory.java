@@ -12,9 +12,7 @@ public class FlyweightFactory {
 
     public ClientBanca getDetinator(String nume, String nrTelefon, String adresa) {
         if(!this.conturi.containsKey(nume)) {
-            ClientBanca detinator = new Detinator(nume, nrTelefon, adresa);
-            this.conturi.put(nume, detinator);
-            return detinator;
+            this.conturi.put(nume, new Detinator(nume, nrTelefon, adresa));
         }
 
         return this.conturi.get(nume);
